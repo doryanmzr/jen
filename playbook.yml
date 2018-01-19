@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  tasks:
+   - name: Add repository
+     yum: name=epel-release state=present
+   - name: install apache
+     yum: name=httpd state=present
+
+   
